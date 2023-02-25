@@ -23,6 +23,31 @@ task('clean', async () => {
   });
 });
 
+task('ctix:single', async () => {
+  const cmd = 'ctix';
+  const option =
+    'single -p ./tsconfig.prod.json --config ./.configs/.ctirc -g ./.configs/.ctiignore';
+
+  logger.info('Create index file : ', cmd, option);
+
+  await execa(cmd, splitArgs(option), {
+    stderr: process.stderr,
+    stdout: process.stdout,
+  });
+});
+
+task('ctix:remove', async () => {
+  const cmd = 'ctix';
+  const option = 'remove -p ./tsconfig.json --config ./.configs/.ctirc -g ./.configs/.ctiignore';
+
+  logger.info('Remove index file : ', cmd, option);
+
+  await execa(cmd, splitArgs(option), {
+    stderr: process.stderr,
+    stdout: process.stdout,
+  });
+});
+
 task('+rollup:dev', async () => {
   const cmd = 'rollup';
   const option = '--config ./.configs/rollup.config.dev.ts --configPlugin typescript';
@@ -118,8 +143,8 @@ task('+unpub', async () => {
   });
 });
 
-task('rollup:prod', series('clean', '+rollup:prod'));
-task('rollup:dev', series('clean', '+rollup:dev'));
+task('rollup:prod', series('clean', 'ctix:single', '+rollup:prod', 'ctix:remove'));
+task('rollup:dev', series('clean', 'ctix:single', '+rollup:dev', 'ctix:remove'));
 task('build', series('clean', '+build'));
 task('pub', series('clean', '+rollup:prod', '+pub'));
 task('unpub', series('clean', '+unpub'));
