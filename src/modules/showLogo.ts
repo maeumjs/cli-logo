@@ -12,6 +12,7 @@ export default async function showLogo(option?: {
 }) {
   const message = option?.message ?? 'Logo';
   const color = getColor(option?.color);
+  const log = option?.log ?? console.log;
 
   const figletOption = { ...(option?.figlet ?? {}) };
   figletOption.font = getFont(figletOption.font);
@@ -29,8 +30,8 @@ export default async function showLogo(option?: {
   });
 
   if (figure != null && color != null) {
-    option?.log?.(chalk[color](figure));
+    log(chalk[color](figure));
   } else if (figure != null) {
-    option?.log?.(figure);
+    log(figure);
   }
 }
