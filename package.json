@@ -19,7 +19,7 @@
     "pub": "just --config ./.configs/just.config.ts pub",
     "pub:prod": "just --config ./.configs/just.config.ts pub:prod",
     "dd": "deps-diff md -d prod -d dev --title-list-type '*' --deps-list-type '*' --content-list-type '*'",
-    "prepublishOnly": "node prepublish.js",
+    "prepublishOnly": "node prepublish.cjs",
     "prepare": "husky install"
   },
   "repository": {
