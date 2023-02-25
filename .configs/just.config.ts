@@ -114,7 +114,7 @@ task('+pub', async () => {
 
 task('+pub:prod', async () => {
   const cmd = 'npm';
-  const option = 'publish';
+  const option = 'publish --access=public';
 
   await execa(cmd, splitArgs(option), {
     env: {
@@ -146,6 +146,6 @@ task('+unpub', async () => {
 task('rollup:prod', series('clean', 'ctix:single', '+rollup:prod', 'ctix:remove'));
 task('rollup:dev', series('clean', 'ctix:single', '+rollup:dev', 'ctix:remove'));
 task('build', series('clean', '+build'));
-task('pub', series('clean', '+rollup:prod', '+pub'));
+task('pub', series('rollup:prod', '+pub'));
 task('unpub', series('clean', '+unpub'));
-task('pub:prod', series('clean', '+rollup:prod', '+pub:prod'));
+task('pub:prod', series('rollup:prod', '+pub:prod'));
