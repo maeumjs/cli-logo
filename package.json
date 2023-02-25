@@ -17,6 +17,7 @@
     "rollup:prod": "just --config ./.configs/just.config.ts rollup:prod",
     "rollup:dev": "just --config ./.configs/just.config.ts rollup:dev",
     "dd": "deps-diff md -d prod -d dev --title-list-type '*' --deps-list-type '*' --content-list-type '*'",
+    "prepublishOnly": "node prepublish.js",
     "prepare": "husky install"
   },
   "repository": {
