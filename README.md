@@ -1,12 +1,14 @@
-# TypeScript cli boilerplate
+# @maeum/cli-logo
+
+`cli-logo` is display logo on console. `cli-logo` using [figlet](https://github.com/patorjk/figlet.js) and [chalk](https://github.com/chalk/chalk).
+
+Why?
+
+1. validate `color`, `font` variable
+2. can pass figlet option, color and console display (eg. console.log) function
 
 ## installation
 
 ```bash
-# Clone the boilerplate:
-git clone --depth=1 \
-  https://github.com/imjuni/typescript-cli-boilerplate.git \
-  your-project-name
-
-cd your-project-name
+npm install @maeum/cli-logo --save
 ```
