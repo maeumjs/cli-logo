@@ -1,6 +1,6 @@
-import getColor from '#modules/getColor';
-import getFont from '#modules/getFont';
-import type TChalkColorFunction from '#modules/interfaces/TChalkColorFunction';
+import getColor from 'src/getColor';
+import getFont from 'src/getFont';
+import type TChalkColorFunction from 'src/interfaces/TChalkColorFunction';
 import chalk from 'chalk';
 import figlet from 'figlet';
 
