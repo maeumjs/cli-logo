@@ -63,7 +63,7 @@ module.exports = {
       },
     },
     {
-      files: ['src/modules/logo.ts', 'prepublish.cjs', 'src/modules/showLogo.ts'],
+      files: ['src/logo.ts', 'prepublish.cjs', 'src/showLogo.ts'],
       rules: {
         'no-console': ['off'],
       },

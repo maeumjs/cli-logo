@@ -1,4 +1,4 @@
-import type TChalkColorFunction from '#modules/interfaces/TChalkColorFunction';
+import type TChalkColorFunction from 'src/interfaces/TChalkColorFunction';
 
 export default function getColor(color?: TChalkColorFunction): TChalkColorFunction | undefined {
   if (

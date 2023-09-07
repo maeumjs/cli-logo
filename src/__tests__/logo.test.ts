@@ -1,7 +1,7 @@
-import getColor from '#modules/getColor';
-import getFont from '#modules/getFont';
-import type TChalkColorFunction from '#modules/interfaces/TChalkColorFunction';
-import showLogo from '#modules/showLogo';
+import getColor from 'src/getColor';
+import getFont from 'src/getFont';
+import type TChalkColorFunction from 'src/interfaces/TChalkColorFunction';
+import showLogo from 'src/showLogo';
 import figlet from 'figlet';
 import 'jest';
 
