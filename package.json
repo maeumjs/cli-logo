@@ -1,6 +1,6 @@
 {
   "name": "@maeum/cli-logo",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "logo disply utility for cli tools",
   "engines": {
     "node": ">=18"
