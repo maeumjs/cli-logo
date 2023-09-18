@@ -1,28 +1,29 @@
-import type TChalkColorFunction from 'src/interfaces/TChalkColorFunction';
+import type { ForegroundColor } from 'chalk';
 
-export default function getColor(color?: TChalkColorFunction): TChalkColorFunction | undefined {
-  if (
-    color === 'black' ||
-    color === 'red' ||
-    color === 'green' ||
-    color === 'yellow' ||
-    color === 'blue' ||
-    color === 'magenta' ||
-    color === 'cyan' ||
-    color === 'white' ||
-    color === 'gray' ||
-    color === 'grey' ||
-    color === 'blackBright' ||
-    color === 'redBright' ||
-    color === 'greenBright' ||
-    color === 'yellowBright' ||
-    color === 'blueBright' ||
-    color === 'magentaBright' ||
-    color === 'cyanBright' ||
-    color === 'whiteBright'
-  ) {
-    return color;
+export default function getColor(
+  color?: typeof ForegroundColor,
+): typeof ForegroundColor | undefined {
+  switch (color) {
+    case 'black':
+    case 'red':
+    case 'green':
+    case 'yellow':
+    case 'blue':
+    case 'magenta':
+    case 'cyan':
+    case 'white':
+    case 'gray':
+    case 'grey':
+    case 'blackBright':
+    case 'redBright':
+    case 'greenBright':
+    case 'yellowBright':
+    case 'blueBright':
+    case 'magentaBright':
+    case 'cyanBright':
+    case 'whiteBright':
+      return color;
+    default:
+      return undefined;
   }
-
-  return undefined;
 }
