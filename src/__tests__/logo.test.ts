@@ -1,9 +1,9 @@
-import getColor from 'src/getColor';
-import getFont from 'src/getFont';
-import type TChalkColorFunction from 'src/interfaces/TChalkColorFunction';
-import showLogo from 'src/showLogo';
+import type { ForegroundColor } from 'chalk';
 import figlet from 'figlet';
 import 'jest';
+import getColor from 'src/getColor';
+import getFont from 'src/getFont';
+import showLogo from 'src/showLogo';
 
 describe('getColor', () => {
   test('pass', () => {
@@ -17,7 +17,7 @@ describe('getColor', () => {
   });
 
   test('pass', () => {
-    const r = getColor('invalid-color' as TChalkColorFunction);
+    const r = getColor('invalid-color' as typeof ForegroundColor);
     expect(r).toBeUndefined();
   });
 });

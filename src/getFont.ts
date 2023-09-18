@@ -3,299 +3,298 @@ import type figlet from 'figlet';
 const defaultValue: figlet.Fonts = 'ANSI Shadow';
 
 export default function getFont(font?: figlet.Fonts): figlet.Fonts {
-  if (
-    font === '1Row' ||
-    font === '3-D' ||
-    font === '3D Diagonal' ||
-    font === '3D-ASCII' ||
-    font === '3x5' ||
-    font === '4Max' ||
-    font === '5 Line Oblique' ||
-    font === 'AMC 3 Line' ||
-    font === 'AMC 3 Liv1' ||
-    font === 'AMC AAA01' ||
-    font === 'AMC Neko' ||
-    font === 'AMC Razor' ||
-    font === 'AMC Razor2' ||
-    font === 'AMC Slash' ||
-    font === 'AMC Slider' ||
-    font === 'AMC Thin' ||
-    font === 'AMC Tubes' ||
-    font === 'AMC Untitled' ||
-    font === 'ANSI Regular' ||
-    font === 'ANSI Shadow' ||
-    font === 'ASCII New Roman' ||
-    font === 'Acrobatic' ||
-    font === 'Alligator' ||
-    font === 'Alligator2' ||
-    font === 'Alpha' ||
-    font === 'Alphabet' ||
-    font === 'Arrows' ||
-    font === 'Avatar' ||
-    font === 'B1FF' ||
-    font === 'Banner' ||
-    font === 'Banner3-D' ||
-    font === 'Banner3' ||
-    font === 'Banner4' ||
-    font === 'Barbwire' ||
-    font === 'Basic' ||
-    font === 'Bear' ||
-    font === 'Bell' ||
-    font === 'Benjamin' ||
-    font === 'Big Chief' ||
-    font === 'Big Money-ne' ||
-    font === 'Big Money-nw' ||
-    font === 'Big Money-se' ||
-    font === 'Big Money-sw' ||
-    font === 'Big' ||
-    font === 'Bigfig' ||
-    font === 'Binary' ||
-    font === 'Block' ||
-    font === 'Blocks' ||
-    font === 'Bloody' ||
-    font === 'Bolger' ||
-    font === 'Braced' ||
-    font === 'Bright' ||
-    font === 'Broadway KB' ||
-    font === 'Broadway' ||
-    font === 'Bubble' ||
-    font === 'Bulbhead' ||
-    font === 'Caligraphy' ||
-    font === 'Caligraphy2' ||
-    font === 'Calvin S' ||
-    font === 'Cards' ||
-    font === 'Catwalk' ||
-    font === 'Chiseled' ||
-    font === 'Chunky' ||
-    font === 'Coinstak' ||
-    font === 'Cola' ||
-    font === 'Colossal' ||
-    font === 'Computer' ||
-    font === 'Contessa' ||
-    font === 'Contrast' ||
-    font === 'Cosmike' ||
-    font === 'Crawford' ||
-    font === 'Crawford2' ||
-    font === 'Crazy' ||
-    font === 'Cricket' ||
-    font === 'Cursive' ||
-    font === 'Cyberlarge' ||
-    font === 'Cybermedium' ||
-    font === 'Cybersmall' ||
-    font === 'Cygnet' ||
-    font === 'DANC4' ||
-    font === 'DOS Rebel' ||
-    font === 'DWhistled' ||
-    font === 'Dancing Font' ||
-    font === 'Decimal' ||
-    font === 'Def Leppard' ||
-    font === 'Delta Corps Priest 1' ||
-    font === 'Diamond' ||
-    font === 'Diet Cola' ||
-    font === 'Digital' ||
-    font === 'Doh' ||
-    font === 'Doom' ||
-    font === 'Dot Matrix' ||
-    font === 'Double Shorts' ||
-    font === 'Double' ||
-    font === 'Dr Pepper' ||
-    font === 'Efti Chess' ||
-    font === 'Efti Font' ||
-    font === 'Efti Italic' ||
-    font === 'Efti Piti' ||
-    font === 'Efti Robot' ||
-    font === 'Efti Wall' ||
-    font === 'Efti Water' ||
-    font === 'Electronic' ||
-    font === 'Elite' ||
-    font === 'Epic' ||
-    font === 'Fender' ||
-    font === 'Filter' ||
-    font === 'Fire Font-k' ||
-    font === 'Fire Font-s' ||
-    font === 'Flipped' ||
-    font === 'Flower Power' ||
-    font === 'Four Tops' ||
-    font === 'Fraktur' ||
-    font === 'Fun Face' ||
-    font === 'Fun Faces' ||
-    font === 'Fuzzy' ||
-    font === 'Georgi16' ||
-    font === 'Georgia11' ||
-    font === 'Ghost' ||
-    font === 'Ghoulish' ||
-    font === 'Glenyn' ||
-    font === 'Goofy' ||
-    font === 'Gothic' ||
-    font === 'Graceful' ||
-    font === 'Gradient' ||
-    font === 'Graffiti' ||
-    font === 'Greek' ||
-    font === 'Heart Left' ||
-    font === 'Heart Right' ||
-    font === 'Henry 3D' ||
-    font === 'Hex' ||
-    font === 'Hieroglyphs' ||
-    font === 'Hollywood' ||
-    font === 'Horizontal Left' ||
-    font === 'Horizontal Right' ||
-    font === 'ICL-1900' ||
-    font === 'Impossible' ||
-    font === 'Invita' ||
-    font === 'Isometric1' ||
-    font === 'Isometric2' ||
-    font === 'Isometric3' ||
-    font === 'Isometric4' ||
-    font === 'Italic' ||
-    font === 'Ivrit' ||
-    font === 'JS Block Letters' ||
-    font === 'JS Bracket Letters' ||
-    font === 'JS Capital Curves' ||
-    font === 'JS Cursive' ||
-    font === 'JS Stick Letters' ||
-    font === 'Jacky' ||
-    font === 'Jazmine' ||
-    font === 'Jerusalem' ||
-    font === 'Katakana' ||
-    font === 'Kban' ||
-    font === 'Keyboard' ||
-    font === 'Knob' ||
-    font === 'Konto Slant' ||
-    font === 'Konto' ||
-    font === 'LCD' ||
-    font === 'Larry 3D 2' ||
-    font === 'Larry 3D' ||
-    font === 'Lean' ||
-    font === 'Letters' ||
-    font === 'Lil Devil' ||
-    font === 'Line Blocks' ||
-    font === 'Linux' ||
-    font === 'Lockergnome' ||
-    font === 'Madrid' ||
-    font === 'Marquee' ||
-    font === 'Maxfour' ||
-    font === 'Merlin1' ||
-    font === 'Merlin2' ||
-    font === 'Mike' ||
-    font === 'Mini' ||
-    font === 'Mirror' ||
-    font === 'Mnemonic' ||
-    font === 'Modular' ||
-    font === 'Morse' ||
-    font === 'Morse2' ||
-    font === 'Moscow' ||
-    font === 'Mshebrew210' ||
-    font === 'Muzzle' ||
-    font === 'NScript' ||
-    font === 'NT Greek' ||
-    font === 'NV Script' ||
-    font === 'Nancyj-Fancy' ||
-    font === 'Nancyj-Improved' ||
-    font === 'Nancyj-Underlined' ||
-    font === 'Nancyj' ||
-    font === 'Nipples' ||
-    font === 'O8' ||
-    font === 'OS2' ||
-    font === 'Octal' ||
-    font === 'Ogre' ||
-    font === 'Old Banner' ||
-    font === 'Pagga' ||
-    font === "Patorjk's Cheese" ||
-    font === 'Patorjk-HeX' ||
-    font === 'Pawp' ||
-    font === 'Peaks Slant' ||
-    font === 'Peaks' ||
-    font === 'Pebbles' ||
-    font === 'Pepper' ||
-    font === 'Poison' ||
-    font === 'Puffy' ||
-    font === 'Puzzle' ||
-    font === 'Pyramid' ||
-    font === 'Rammstein' ||
-    font === 'Rectangles' ||
-    font === 'Red Phoenix' ||
-    font === 'Relief' ||
-    font === 'Relief2' ||
-    font === 'Reverse' ||
-    font === 'Roman' ||
-    font === 'Rot13' ||
-    font === 'Rotated' ||
-    font === 'Rounded' ||
-    font === 'Rowan Cap' ||
-    font === 'Rozzo' ||
-    font === 'Runic' ||
-    font === 'Runyc' ||
-    font === 'S Blood' ||
-    font === 'SL Script' ||
-    font === 'Santa Clara' ||
-    font === 'Script' ||
-    font === 'Serifcap' ||
-    font === 'Shadow' ||
-    font === 'Shimrod' ||
-    font === 'Short' ||
-    font === 'Slant Relief' ||
-    font === 'Slant' ||
-    font === 'Slide' ||
-    font === 'Small Caps' ||
-    font === 'Small Isometric1' ||
-    font === 'Small Keyboard' ||
-    font === 'Small Poison' ||
-    font === 'Small Script' ||
-    font === 'Small Shadow' ||
-    font === 'Small Slant' ||
-    font === 'Small Tengwar' ||
-    font === 'Small' ||
-    font === 'Soft' ||
-    font === 'Speed' ||
-    font === 'Spliff' ||
-    font === 'Stacey' ||
-    font === 'Stampate' ||
-    font === 'Stampatello' ||
-    font === 'Standard' ||
-    font === 'Star Strips' ||
-    font === 'Star Wars' ||
-    font === 'Stellar' ||
-    font === 'Stforek' ||
-    font === 'Stick Letters' ||
-    font === 'Stop' ||
-    font === 'Straight' ||
-    font === 'Stronger Than All' ||
-    font === 'Sub-Zero' ||
-    font === 'Swamp Land' ||
-    font === 'Swan' ||
-    font === 'Sweet' ||
-    font === 'THIS' ||
-    font === 'Tanja' ||
-    font === 'Tengwar' ||
-    font === 'Term' ||
-    font === 'Test1' ||
-    font === 'The Edge' ||
-    font === 'Thick' ||
-    font === 'Thin' ||
-    font === 'Thorned' ||
-    font === 'Three Point' ||
-    font === 'Ticks Slant' ||
-    font === 'Ticks' ||
-    font === 'Tiles' ||
-    font === 'Tinker-Toy' ||
-    font === 'Tombstone' ||
-    font === 'Train' ||
-    font === 'Trek' ||
-    font === 'Tsalagi' ||
-    font === 'Tubular' ||
-    font === 'Twisted' ||
-    font === 'Two Point' ||
-    font === 'USA Flag' ||
-    font === 'Univers' ||
-    font === 'Varsity' ||
-    font === 'Wavy' ||
-    font === 'Weird' ||
-    font === 'Wet Letter' ||
-    font === 'Whimsy' ||
-    font === 'Wow'
-  ) {
-    return font;
+  switch (font) {
+    case '1Row':
+    case '3-D':
+    case '3D Diagonal':
+    case '3D-ASCII':
+    case '3x5':
+    case '4Max':
+    case '5 Line Oblique':
+    case 'AMC 3 Line':
+    case 'AMC 3 Liv1':
+    case 'AMC AAA01':
+    case 'AMC Neko':
+    case 'AMC Razor':
+    case 'AMC Razor2':
+    case 'AMC Slash':
+    case 'AMC Slider':
+    case 'AMC Thin':
+    case 'AMC Tubes':
+    case 'AMC Untitled':
+    case 'ANSI Regular':
+    case 'ANSI Shadow':
+    case 'ASCII New Roman':
+    case 'Acrobatic':
+    case 'Alligator':
+    case 'Alligator2':
+    case 'Alpha':
+    case 'Alphabet':
+    case 'Arrows':
+    case 'Avatar':
+    case 'B1FF':
+    case 'Banner':
+    case 'Banner3-D':
+    case 'Banner3':
+    case 'Banner4':
+    case 'Barbwire':
+    case 'Basic':
+    case 'Bear':
+    case 'Bell':
+    case 'Benjamin':
+    case 'Big Chief':
+    case 'Big Money-ne':
+    case 'Big Money-nw':
+    case 'Big Money-se':
+    case 'Big Money-sw':
+    case 'Big':
+    case 'Bigfig':
+    case 'Binary':
+    case 'Block':
+    case 'Blocks':
+    case 'Bloody':
+    case 'Bolger':
+    case 'Braced':
+    case 'Bright':
+    case 'Broadway KB':
+    case 'Broadway':
+    case 'Bubble':
+    case 'Bulbhead':
+    case 'Caligraphy':
+    case 'Caligraphy2':
+    case 'Calvin S':
+    case 'Cards':
+    case 'Catwalk':
+    case 'Chiseled':
+    case 'Chunky':
+    case 'Coinstak':
+    case 'Cola':
+    case 'Colossal':
+    case 'Computer':
+    case 'Contessa':
+    case 'Contrast':
+    case 'Cosmike':
+    case 'Crawford':
+    case 'Crawford2':
+    case 'Crazy':
+    case 'Cricket':
+    case 'Cursive':
+    case 'Cyberlarge':
+    case 'Cybermedium':
+    case 'Cybersmall':
+    case 'Cygnet':
+    case 'DANC4':
+    case 'DOS Rebel':
+    case 'DWhistled':
+    case 'Dancing Font':
+    case 'Decimal':
+    case 'Def Leppard':
+    case 'Delta Corps Priest 1':
+    case 'Diamond':
+    case 'Diet Cola':
+    case 'Digital':
+    case 'Doh':
+    case 'Doom':
+    case 'Dot Matrix':
+    case 'Double Shorts':
+    case 'Double':
+    case 'Dr Pepper':
+    case 'Efti Chess':
+    case 'Efti Font':
+    case 'Efti Italic':
+    case 'Efti Piti':
+    case 'Efti Robot':
+    case 'Efti Wall':
+    case 'Efti Water':
+    case 'Electronic':
+    case 'Elite':
+    case 'Epic':
+    case 'Fender':
+    case 'Filter':
+    case 'Fire Font-k':
+    case 'Fire Font-s':
+    case 'Flipped':
+    case 'Flower Power':
+    case 'Four Tops':
+    case 'Fraktur':
+    case 'Fun Face':
+    case 'Fun Faces':
+    case 'Fuzzy':
+    case 'Georgi16':
+    case 'Georgia11':
+    case 'Ghost':
+    case 'Ghoulish':
+    case 'Glenyn':
+    case 'Goofy':
+    case 'Gothic':
+    case 'Graceful':
+    case 'Gradient':
+    case 'Graffiti':
+    case 'Greek':
+    case 'Heart Left':
+    case 'Heart Right':
+    case 'Henry 3D':
+    case 'Hex':
+    case 'Hieroglyphs':
+    case 'Hollywood':
+    case 'Horizontal Left':
+    case 'Horizontal Right':
+    case 'ICL-1900':
+    case 'Impossible':
+    case 'Invita':
+    case 'Isometric1':
+    case 'Isometric2':
+    case 'Isometric3':
+    case 'Isometric4':
+    case 'Italic':
+    case 'Ivrit':
+    case 'JS Block Letters':
+    case 'JS Bracket Letters':
+    case 'JS Capital Curves':
+    case 'JS Cursive':
+    case 'JS Stick Letters':
+    case 'Jacky':
+    case 'Jazmine':
+    case 'Jerusalem':
+    case 'Katakana':
+    case 'Kban':
+    case 'Keyboard':
+    case 'Knob':
+    case 'Konto Slant':
+    case 'Konto':
+    case 'LCD':
+    case 'Larry 3D 2':
+    case 'Larry 3D':
+    case 'Lean':
+    case 'Letters':
+    case 'Lil Devil':
+    case 'Line Blocks':
+    case 'Linux':
+    case 'Lockergnome':
+    case 'Madrid':
+    case 'Marquee':
+    case 'Maxfour':
+    case 'Merlin1':
+    case 'Merlin2':
+    case 'Mike':
+    case 'Mini':
+    case 'Mirror':
+    case 'Mnemonic':
+    case 'Modular':
+    case 'Morse':
+    case 'Morse2':
+    case 'Moscow':
+    case 'Mshebrew210':
+    case 'Muzzle':
+    case 'NScript':
+    case 'NT Greek':
+    case 'NV Script':
+    case 'Nancyj-Fancy':
+    case 'Nancyj-Improved':
+    case 'Nancyj-Underlined':
+    case 'Nancyj':
+    case 'Nipples':
+    case 'O8':
+    case 'OS2':
+    case 'Octal':
+    case 'Ogre':
+    case 'Old Banner':
+    case 'Pagga':
+    case "Patorjk's Cheese":
+    case 'Patorjk-HeX':
+    case 'Pawp':
+    case 'Peaks Slant':
+    case 'Peaks':
+    case 'Pebbles':
+    case 'Pepper':
+    case 'Poison':
+    case 'Puffy':
+    case 'Puzzle':
+    case 'Pyramid':
+    case 'Rammstein':
+    case 'Rectangles':
+    case 'Red Phoenix':
+    case 'Relief':
+    case 'Relief2':
+    case 'Reverse':
+    case 'Roman':
+    case 'Rot13':
+    case 'Rotated':
+    case 'Rounded':
+    case 'Rowan Cap':
+    case 'Rozzo':
+    case 'Runic':
+    case 'Runyc':
+    case 'S Blood':
+    case 'SL Script':
+    case 'Santa Clara':
+    case 'Script':
+    case 'Serifcap':
+    case 'Shadow':
+    case 'Shimrod':
+    case 'Short':
+    case 'Slant Relief':
+    case 'Slant':
+    case 'Slide':
+    case 'Small Caps':
+    case 'Small Isometric1':
+    case 'Small Keyboard':
+    case 'Small Poison':
+    case 'Small Script':
+    case 'Small Shadow':
+    case 'Small Slant':
+    case 'Small Tengwar':
+    case 'Small':
+    case 'Soft':
+    case 'Speed':
+    case 'Spliff':
+    case 'Stacey':
+    case 'Stampate':
+    case 'Stampatello':
+    case 'Standard':
+    case 'Star Strips':
+    case 'Star Wars':
+    case 'Stellar':
+    case 'Stforek':
+    case 'Stick Letters':
+    case 'Stop':
+    case 'Straight':
+    case 'Stronger Than All':
+    case 'Sub-Zero':
+    case 'Swamp Land':
+    case 'Swan':
+    case 'Sweet':
+    case 'THIS':
+    case 'Tanja':
+    case 'Tengwar':
+    case 'Term':
+    case 'Test1':
+    case 'The Edge':
+    case 'Thick':
+    case 'Thin':
+    case 'Thorned':
+    case 'Three Point':
+    case 'Ticks Slant':
+    case 'Ticks':
+    case 'Tiles':
+    case 'Tinker-Toy':
+    case 'Tombstone':
+    case 'Train':
+    case 'Trek':
+    case 'Tsalagi':
+    case 'Tubular':
+    case 'Twisted':
+    case 'Two Point':
+    case 'USA Flag':
+    case 'Univers':
+    case 'Varsity':
+    case 'Wavy':
+    case 'Weird':
+    case 'Wet Letter':
+    case 'Whimsy':
+    case 'Wow':
+      return font;
+    default:
+      return defaultValue;
   }
-
-  return defaultValue;
 }

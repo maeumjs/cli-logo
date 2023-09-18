@@ -1,13 +1,13 @@
-import getColor from 'src/getColor';
-import getFont from 'src/getFont';
-import type TChalkColorFunction from 'src/interfaces/TChalkColorFunction';
+import type { ForegroundColor } from 'chalk';
 import chalk from 'chalk';
 import figlet from 'figlet';
+import getColor from 'src/getColor';
+import getFont from 'src/getFont';
 
 export default async function showLogo(option?: {
   message?: string;
   figlet?: figlet.Options;
-  color?: TChalkColorFunction;
+  color?: typeof ForegroundColor;
   log?: typeof console.log;
 }) {
   const message = option?.message ?? 'Logo';
